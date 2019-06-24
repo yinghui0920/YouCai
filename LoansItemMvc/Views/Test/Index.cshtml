@@ -1,0 +1,52 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<script src="~/Scripts/jquery-3.3.1.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#fileButton").click(function () {
+            var files = $("#fileInput").get(0).files;
+            var fileData = new FormData();
+            for (var i = 0; i < files.length; i++) {
+                fileData.append("fileInput", files[i]);
+            }
+            alert(fileData);
+            $.ajax({
+                type: "POST",
+                url: "/Test/Photo",
+                dataType: "json",
+                contentType: false,
+                // Not to set any content header
+                processData: false,
+                // Not to process data
+                data: fileData,
+                success: function (result, status, xhr) {
+                    alert(result); $("#fileInput").val("");
+                },
+                error: function (xhr, status, error) {
+                    alert(status);
+                }
+            });
+        });
+        $(document).ajaxStart(function () {
+            //$("#loadingImg").show();
+            // $("#fileButton").prop('disabled', true);
+        }); $(document).ajaxStop(function () {
+            //$("#loadingImg").hide();
+            // $("#fileButton").prop('disabled', false);
+            // $("#fileInput").val("");
+        });
+    });
+</script>
+<!--Attachment 5-->
+<div class="content">
+    <textarea id="txtID1" cols="60" rows="3" style="color:black"></textarea>
+    <div class="row">
+        <input type="file" id="fileInput" multiple />
+        <input type="button" id="fileButton" value="Upload Files" /><br />
+    </div>
+</div>
+

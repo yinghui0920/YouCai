@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Get" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://10.1.152.16:8080/Get.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://10.1.152.16:8080/Get.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://10.1.152.16:8080/Get.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/MyDome.Model" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IGet_DoWorkTable_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoWorkTable" />
+  </wsdl:message>
+  <wsdl:message name="IGet_DoWorkTable_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoWorkTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_DoWorkGoal_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoWorkGoal" />
+  </wsdl:message>
+  <wsdl:message name="IGet_DoWorkGoal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoWorkGoalResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_DoWorkType_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoWorkType" />
+  </wsdl:message>
+  <wsdl:message name="IGet_DoWorkType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoWorkTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_DoWorkAdmin_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoWorkAdmin" />
+  </wsdl:message>
+  <wsdl:message name="IGet_DoWorkAdmin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoWorkAdminResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetUserInfoAndMyBill_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserInfoAndMyBill" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetUserInfoAndMyBill_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserInfoAndMyBillResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_Moeney_InputMessage">
+    <wsdl:part name="parameters" element="tns:Moeney" />
+  </wsdl:message>
+  <wsdl:message name="IGet_Moeney_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MoeneyResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IGet">
+    <wsdl:operation name="DoWorkTable">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/DoWorkTable" message="tns:IGet_DoWorkTable_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/DoWorkTableResponse" message="tns:IGet_DoWorkTable_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DoWorkGoal">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/DoWorkGoal" message="tns:IGet_DoWorkGoal_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/DoWorkGoalResponse" message="tns:IGet_DoWorkGoal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DoWorkType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/DoWorkType" message="tns:IGet_DoWorkType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/DoWorkTypeResponse" message="tns:IGet_DoWorkType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DoWorkAdmin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/DoWorkAdmin" message="tns:IGet_DoWorkAdmin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/DoWorkAdminResponse" message="tns:IGet_DoWorkAdmin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserInfoAndMyBill">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/GetUserInfoAndMyBill" message="tns:IGet_GetUserInfoAndMyBill_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/GetUserInfoAndMyBillResponse" message="tns:IGet_GetUserInfoAndMyBill_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Moeney">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/Moeney" message="tns:IGet_Moeney_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/MoeneyResponse" message="tns:IGet_Moeney_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IGet" type="tns:IGet">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DoWorkTable">
+      <soap:operation soapAction="http://tempuri.org/IGet/DoWorkTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoWorkGoal">
+      <soap:operation soapAction="http://tempuri.org/IGet/DoWorkGoal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoWorkType">
+      <soap:operation soapAction="http://tempuri.org/IGet/DoWorkType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoWorkAdmin">
+      <soap:operation soapAction="http://tempuri.org/IGet/DoWorkAdmin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserInfoAndMyBill">
+      <soap:operation soapAction="http://tempuri.org/IGet/GetUserInfoAndMyBill" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Moeney">
+      <soap:operation soapAction="http://tempuri.org/IGet/Moeney" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Get">
+    <wsdl:port name="BasicHttpBinding_IGet" binding="tns:BasicHttpBinding_IGet">
+      <soap:address location="http://10.1.152.16:8080/Get.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

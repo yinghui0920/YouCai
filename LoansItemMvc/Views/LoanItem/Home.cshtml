@@ -1,0 +1,298 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home</title>
+    <script src="~/Scripts/jquery-3.3.1.js"></script>
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <!-- custom-theme -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="" />
+    <script type="application/x-javascript">
+        addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+               function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- //custom-theme -->
+    <link href="~/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="~/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- js -->
+    <script type="text/javascript" src="~/js/jquery-2.1.4.min.js"></script>
+    <!-- //js -->
+    <link rel="stylesheet" href="~/css/flexslider.css" type="text/css" media="screen" property="" />
+    <!-- font-awesome-icons -->
+    <link href="~/css/font-awesome.css" rel="stylesheet">
+    <!-- //font-awesome-icons -->
+    <link href="http://fonts.googleapis.com/css?family=Cabin:400,400i,500,500i,600,600i,700,700i&amp;subset=latin-ext,vietnamese" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
+</head>
+
+<body>
+    <!-- banner -->
+    <div class="banner">
+        <div class="container">
+            <nav class="navbar navbar-default">
+                <div class="navbar-header navbar-left">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <h1><a class="navbar-brand" href="index.html"><span>L</span><i>有财贷款</i></a></h1>
+                </div>
+                <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+                    <nav class="link-effect-2" id="link-effect-2">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="/LoanItem/Home" class="effect-3">首页</a></li>
+                            <li><a href="/LoanItem/Index" class="effect-3">找贷款</a></li>
+                            <li><a href="/LoanItem/Calculator" class="effect-3">利率计算器</a></li>
+                            <li><a href="portfolio.html" class="effect-3">帮助</a></li>
+                            <li><a href="mail.html" class="effect-3">个人中心</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </nav>
+            <div class="w3_agile_banner_info">
+                <h3>超低利率<span> & </span>息费透明</h3>
+                <p></p>
+                <span style="font-size:25px;color:#f45959">最高贷款额度（元）</span>
+                <h3>500,000.00</h3>
+                <p></p>
+                <ul>
+                    <li><a href="/LoanItem/Calculator" class="w3l_contact">钱不够花？</a></li>
+                    <li><a href="/LoanItem/Index" class="w3ls_more">点我试试</a></li>
+                </ul>
+            </div>
+            <div class="agile_arrow_bounce">
+                <a href="#about" class="agile_arrow bounce scroll"></a>
+            </div>
+        </div>
+    </div>
+    <!-- //banner -->
+    <!-- bootstrap-pop-up -->
+    <div class="modal video-modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    登记信息
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <section>
+                    <div class="modal-body">
+            <p>
+                1.了解办理贷款的手续是否正规
+                <i>
+                    " 一般来说如果是正规的贷款都会有很复杂的办理程序，层层审核才能够给予批款，如果办理贷款过于简单，甚至一张身份证就能够办理的，肯定是骗子。"
+                </i>
+            </p>
+            <p>
+                2.了解借贷平台背景
+                <i>
+                    "现在有很多小额贷款网站和APP，只要在手机上就能够借到钱，在借钱之前，一定要先了解一下这个平台是否正规，这样才能够避免受害。"
+                </i>
+            </p>
+            <p>
+                3.避免陷入高额利息
+                <i>
+                    "正规的贷款都不会有很高的利息，但是如果加入了不正规的小额贷款平台，就会陷入高额的利益，如果发现一定要报警，走法律来维护自己的合法权益。"
+                </i>
+            </p>
+            <p>
+                4.避免收费放贷
+                <i>
+                    "正规的贷款平台，都不会收取费用，如果有一些放贷平台直接扣取费用，这类平台是非常不正规，都是骗子，千万不要相信。"
+                </i>
+            </p>
+
+        </div>
+                    <!-- //bootstrap-pop-up -->
+                </section>
+            </div>
+        </div>
+    </div>
+    <!-- //bootstrap-pop-up -->
+    <!-- strip -->
+    <div class="agileits_w3layouts_strip">
+        <div class="container">
+            <div class="w3_agileits_strip_left">
+                <h3>&nbsp;抵制暴力催收 , 谨防上当受骗</h3>
+            </div>
+            <div class="w3_agileits_strip_right">
+                <a data-toggle="modal" data-target="#myModal">借款须知</a>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+    <!-- //strip -->
+    <!-- banner-bottom -->
+    <div class="banner-bottom">
+        <div class="container">
+            <div class="agileits_heading_section">
+                <img src="~/images/2.png" alt=" " class="img-responsive" />
+                <h3 class="wthree_head">为什么选择我们</h3>
+            </div>
+            <div class="w3ls_banner_bottom_grids">
+                <div class="col-md-4 w3ls_banner_bottom_grid">
+                    <div class="w3l_banner_bottom_grid1">
+                        <i class="fa fa-desktop hvr-pulse-shrink" aria-hidden="true"></i>
+                    </div>
+                    <h4>高额度</h4>
+                    <p>手续简单，随借随还</p>
+                    <p>贷款成数高，最高最可达100%</p>
+                </div>
+                <div class="col-md-4 w3ls_banner_bottom_grid">
+                    <div class="w3l_banner_bottom_grid1">
+                        <i class="fa fa-users hvr-pulse-shrink" aria-hidden="true"></i>
+                    </div>
+                    <h4>低利息</h4>
+                    <p>不用款不计息，按年还本付息</p>
+                    <p>超低利息，年利率最低仅仅0.8%</p>
+                </div>
+                <div class="col-md-4 w3ls_banner_bottom_grid">
+                    <div class="w3l_banner_bottom_grid1">
+                        <i class="fa fa-wrench hvr-pulse-shrink" aria-hidden="true"></i>
+                    </div>
+                    <h4>快放款</h4>
+                    <p>征信中心抵押贷款，24小时内即可放款</p>
+                    <p>只需所需少许材料即可办理</p>
+
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+    <!-- //banner-bottom -->
+    <!-- testimonials -->
+    <!-- //testimonials -->
+    <!-- about -->
+    <div id="about" class="banner-bottom">
+
+    </div>
+    <!-- //about -->
+    <!-- quotes -->
+    <div class="quotes">
+        <div class="container">
+            <h3>高效优质的<span>大额贷款</span>，尽在您身边</h3>
+        </div>
+    </div>
+    <!-- //quotes -->
+    <div class="tlinks">Collect from <a href="http://www.cssmoban.com/">企业网站模板</a></div>
+    <!-- team -->
+    <div class="banner-bottom">
+
+    </div>
+    <!-- //team -->
+    <!-- footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="w3ls_address_mail_footer_grids">
+                <div class="col-md-4 w3ls_footer_grid_left">
+                    <div class="wthree_footer_grid_left">
+                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                    </div>
+                    <p>中国<span>上海市</span></p>
+                </div>
+                <div class="col-md-4 w3ls_footer_grid_left">
+                    <div class="wthree_footer_grid_left">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                    </div>
+                    <p>客服电话+(0318) 123 456777  <span>举报电话+(0318) 123 456999 </span></p>
+                </div>
+                <div class="col-md-4 w3ls_footer_grid_left">
+                    <div class="wthree_footer_grid_left">
+                        <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                    </div>
+                    <p>
+                        <span>1501059650@qq.com</span>
+                        <span><a href="mailto:info@example.com">邮箱登录</a></span>
+                    </p>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+            <div class="agileinfo_copyright">
+                <p>温馨提示 : 市场有风险 , 贷款需谨慎</p>
+            </div>
+        </div>
+    </div>
+    <!-- //footer -->
+    <!-- flexSlider -->
+    <script defer src="~/js/jquery.flexslider.js"></script>
+    <script type="text/javascript">
+        $(window).load(function () {
+            $('.flexslider').flexslider({
+                animation: "slide",
+                start: function (slider) {
+                    $('body').removeClass('loading');
+                }
+            });
+        });
+    </script>
+    <!-- //flexSlider -->
+    <!-- flexisel -->
+    <script type="text/javascript" src="~/js/jquery.flexisel.js"></script>
+    <script type="text/javascript">
+        $(window).load(function () {
+            $("#flexiselDemo1").flexisel({
+                visibleItems: 4,
+                animationSpeed: 1000,
+                autoPlay: true,
+                autoPlaySpeed: 3000,
+                pauseOnHover: true,
+                enableResponsiveBreakpoints: true,
+                responsiveBreakpoints: {
+                    portrait: {
+                        changePoint: 480,
+                        visibleItems: 1
+                    },
+                    landscape: {
+                        changePoint: 640,
+                        visibleItems: 2
+                    },
+                    tablet: {
+                        changePoint: 768,
+                        visibleItems: 3
+                    }
+                }
+            });
+
+        });
+    </script>
+    <!-- //flexisel -->
+    <!-- for bootstrap working -->
+    <script src="~/js/bootstrap.js"></script>
+    <!-- //for bootstrap working -->
+    <!-- start-smooth-scrolling -->
+    <script type="text/javascript" src="~/js/move-top.js"></script>
+    <script type="text/javascript" src="~/js/easing.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+            $(".scroll").click(function (event) {
+                event.preventDefault();
+                $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
+            });
+        });
+    </script>
+    <!-- start-smooth-scrolling -->
+    <!-- here stars scrolling icon -->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            /*
+                var defaults = {
+                containerID: 'toTop', // fading element id
+                containerHoverID: 'toTopHover', // fading element hover id
+                scrollSpeed: 1200,
+                easingType: 'linear'
+                };
+            */
+
+            $().UItoTop({ easingType: 'easeOutQuart' });
+
+        });
+    </script>
+    <!-- //here ends scrolling icon -->
+</body>
+</html>

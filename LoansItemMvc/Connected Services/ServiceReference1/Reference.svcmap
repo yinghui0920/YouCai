@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="62cfb074-d5cc-49e5-8f06-d638ecc7133f" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://10.1.152.16:8080/Add.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Add.xsd" MetadataType="Schema" ID="21a9380e-c752-41cd-a92a-69a20bbdc668" SourceId="1" SourceUrl="http://10.1.152.16:8080/Add.svc?xsd=xsd1" />
+    <MetadataFile FileName="Add.disco" MetadataType="Disco" ID="29fc6dc9-10b7-459e-91b0-69f55a4c5310" SourceId="1" SourceUrl="http://10.1.152.16:8080/Add.svc?disco" />
+    <MetadataFile FileName="Add1.xsd" MetadataType="Schema" ID="713911ca-e42d-4d05-87c7-725cea74f951" SourceId="1" SourceUrl="http://10.1.152.16:8080/Add.svc?xsd=xsd0" />
+    <MetadataFile FileName="Add.wsdl" MetadataType="Wsdl" ID="894690ca-c370-4207-88df-9b35774660dc" SourceId="1" SourceUrl="http://10.1.152.16:8080/Add.svc?wsdl" />
+    <MetadataFile FileName="Add2.xsd" MetadataType="Schema" ID="937f8f48-4314-428b-b814-a93537341b26" SourceId="1" SourceUrl="http://10.1.152.16:8080/Add.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

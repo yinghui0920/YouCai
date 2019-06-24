@@ -1,0 +1,181 @@
+﻿@model List<LoansItemMvc.ServiceReference2.YCLoanTypeData>
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>LoanType</title>
+    <!-- custom-theme -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="" />
+    <script type="application/x-javascript">
+        addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+               function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- //custom-theme -->
+    <link href="~/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="~/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- js -->
+    <script type="text/javascript" src="~/js/jquery-2.1.4.min.js"></script>
+    <!-- //js -->
+    <!-- font-awesome-icons -->
+    <link href="~/css/font-awesome.css" rel="stylesheet">
+    <!-- //font-awesome-icons -->
+    <link href="http://fonts.googleapis.com/css?family=Cabin:400,400i,500,500i,600,600i,700,700i&amp;subset=latin-ext,vietnamese" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
+</head>
+
+<body>
+    <!-- banner -->
+    <div class="banner1">
+        <div class="container">
+            <nav class="navbar navbar-default">
+                <div class="navbar-header navbar-left">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <h1><a class="navbar-brand" href="index.html"><span>L</span><i>有财贷款</i></a></h1>
+                </div>
+                <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+                    <nav class="link-effect-2" id="link-effect-2">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="/LoanItem/Home" class="effect-3">首页</a></li>
+                            <li><a href="/LoanItem/Index" class="effect-3">找贷款</a></li>
+                            <li><a href="portfolio.html" class="effect-3">利率计算器</a></li>
+                            <li><a href="portfolio.html" class="effect-3">帮助</a></li>
+                            <li><a href="mail.html" class="effect-3">个人中心</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- //banner -->
+    <!-- breadcrumbs -->
+    <div class="breadcrumbs">
+        <div class="container">
+            <div class="w3layouts_breadcrumbs_left">
+                <ul>
+                    <li><a href="/LoanItem/Home">首页</a><span>/</span></li>
+                    <li>找贷款</li>
+                </ul>
+            </div>
+            <div class="w3layouts_breadcrumbs_right">
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+    <!-- //breadcrumbs -->
+    <!-- services -->
+    <div class="banner-bottom">
+        <div class="container">
+            <div class="agileits_heading_section">
+                <img src="~/images/2.png" alt=" " class="img-responsive" />
+                <h3 class="wthree_head">业务类型</h3>
+                <div style="height:30px;"></div>
+                <p class="agileinfo_para">无抵押小额贷款平台，快速找正规小额贷款公司，个人信用小额贷款2小时放款</p>
+            </div>
+            <div style="height:30px;"></div>
+
+            <div class="w3ls_banner_bottom_grids" >
+                @foreach (var item in Model)
+                {
+                    <div class="col-md-4 agileits_services_grid">
+                        <h3><span>@item.LT_Name </span> 月费率：<span>@item.LT_GoalID%</span></h3>
+                        <p></p>
+                        <p>
+                            @item.LT_Trait
+                        </p>
+                        <div class="w3_agile_services_grid1">
+                            <img src="@item.LT_Picture" alt=" " class="img-responsive" />
+                            <div class="w3_blur"></div>
+                        </div>
+                        <div class="w3layouts_more">
+                            <a href="/LoanItem/Detail?id=@item.LT_Id">查看详细</a>
+                            <div style="height:70px;"></div>
+                        </div>
+                    </div>
+                    <input id="newId" value="@item.LT_Id" type="hidden" />
+                }
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+    <!-- //services -->
+    <!-- footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="w3ls_address_mail_footer_grids">
+                <div class="col-md-4 w3ls_footer_grid_left">
+                    <div class="wthree_footer_grid_left">
+                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                    </div>
+                    <p>中国<span>上海市</span></p>
+                </div>
+                <div class="col-md-4 w3ls_footer_grid_left">
+                    <div class="wthree_footer_grid_left">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                    </div>
+                    <p>客服电话+(0318) 123 456777  <span>举报电话+(0318) 123 456999 </span></p>
+                </div>
+                <div class="col-md-4 w3ls_footer_grid_left">
+                    <div class="wthree_footer_grid_left">
+                        <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                    </div>
+                    <p>
+                        <span>1501059650@qq.com</span>
+                        <span><a href="mailto:info@example.com">邮箱登录</a></span>
+                    </p>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+            <div class="agileinfo_copyright">
+                <p>温馨提示 : 市场有风险 , 贷款需谨慎</p>
+            </div>
+        </div>
+    </div>
+    <!-- //footer -->
+    <!-- for bootstrap working -->
+    <script src="~/js/bootstrap.js"></script>
+    <!-- //for bootstrap working -->
+    <!-- start-smooth-scrolling -->
+    <script type="text/javascript" src="~/js/move-top.js"></script>
+    <script type="text/javascript" src="~/js/easing.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+            $(".scroll").click(function (event) {
+                event.preventDefault();
+                $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
+            });
+        });
+    </script>
+    <!-- start-smooth-scrolling -->
+    <!-- here stars scrolling icon -->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            /*
+                var defaults = {
+                containerID: 'toTop', // fading element id
+                containerHoverID: 'toTopHover', // fading element hover id
+                scrollSpeed: 1200,
+                easingType: 'linear'
+                };
+            */
+
+            $().UItoTop({ easingType: 'easeOutQuart' });
+
+        });
+    </script>
+    <!-- //here ends scrolling icon -->
+</body>
+</html>
+<script>
+    //function Look() {
+    //    var n = parseInt($("#newId").val());
+    //    location.href = "/LoanItem/Detail?LT_Id=" + n;
+    //}
+</script>
