@@ -36,7 +36,6 @@ namespace LoansItemMvc.Controllers
         public int Add(ServiceClient.YCUserInfoData data)
         {
             var result = client.DoWork1(data);
-            Session["name"] = data.U_Id;
             return 1;
         }
         /// <summary>
@@ -47,6 +46,7 @@ namespace LoansItemMvc.Controllers
         public int DengLu(ServiceReference4.YCUserInfoData data)
         {
             var result = getlogin.DoWork(data);
+            Session["name"] = data.U_Id;
             return 1;
         }
 
@@ -102,6 +102,7 @@ namespace LoansItemMvc.Controllers
         //显示类型详细信息、登记
         public JsonResult Detaila(ServiceReference1.YCUserDetailsData YCUser)
         {
+            Session["Tname"] = YCUser.Ud_Name;
             string path = Server.MapPath("~/images/");
 
             HttpFileCollectionBase files = Request.Files;
@@ -115,10 +116,10 @@ namespace LoansItemMvc.Controllers
             ServiceReference1.AddClient TClient = new ServiceReference1.AddClient();
             ServiceReference1.YCUserDetailsData y = new ServiceReference1.YCUserDetailsData();
             bool n = TClient.DoWork(YCUser); //调用WCF中的方法
-            if (n == true)
-            {
-                Response.Write("<script>alert('提交成功');location.href='/LoanItem/Detail'</script>");
-            }
+            //if (n == true)
+            //{
+            //    Response.Write("<script>alert('提交成功');location.href='/LoanItem/Detail'</script>");
+            //}
             return Json(files.Count + " Files Uploaded!");
         }
 
@@ -192,7 +193,7 @@ namespace LoansItemMvc.Controllers
         //个人中心
         public ActionResult MyPersonCenter(UserDetailAndMyBill u)
         {
-            u.Ud_Name = "自行车";
+            u.Ud_Name = Session["Tname"].ToString();
             ServiceReference2.UserDetailAndMyBill userAndBill = new UserDetailAndMyBill();
             ServiceReference2.GetClient client = new GetClient();
             UserDetailAndMyBill s = JsonConvert.DeserializeObject<UserDetailAndMyBill>(client.GetUserInfoAndMyBill(u));

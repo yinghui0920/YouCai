@@ -334,7 +334,7 @@ namespace LoansItemMvc.ServiceReference2 {
         private string LT_GoalIDField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string MB_AllMoneyField;
+        private string Ud_MoneyField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string Ud_NameField;
@@ -375,14 +375,14 @@ namespace LoansItemMvc.ServiceReference2 {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string MB_AllMoney {
+        public string Ud_Money {
             get {
-                return this.MB_AllMoneyField;
+                return this.Ud_MoneyField;
             }
             set {
-                if ((object.ReferenceEquals(this.MB_AllMoneyField, value) != true)) {
-                    this.MB_AllMoneyField = value;
-                    this.RaisePropertyChanged("MB_AllMoney");
+                if ((object.ReferenceEquals(this.Ud_MoneyField, value) != true)) {
+                    this.Ud_MoneyField = value;
+                    this.RaisePropertyChanged("Ud_Money");
                 }
             }
         }

@@ -33,7 +33,7 @@
                         <ul class="nav navbar-nav">
                             <li class="active"><a href="/LoanItem/Home" class="effect-3">首页</a></li>
                             <li><a href="/LoanItem/Index" class="effect-3">找贷款</a></li>
-                            <li><a href="portfolio.html" class="effect-3">利率计算器</a></li>
+                            <li><a href="/LoanItem/Calculator" class="effect-3">利率计算器</a></li>
                             <li><a href="/LoanItem/Helphelp" class="effect-3">帮助</a></li>
                             <li><a href="/LoanItem/MyPersonCenter" class="effect-3">个人中心</a></li>
                         </ul>
@@ -103,7 +103,7 @@
                                 </tr>
                                 <tr style="display:block;height:80px;">
                                     <td>借款金额:</td>
-                                    <td><label id="myLoanTime"><span style="color:red;">&nbsp;@Model.MB_AllMoney&nbsp;</span>元</label></td>
+                                    <td><label id="myLoanTime"><span style="color:red;">&nbsp;@Model.Ud_Money&nbsp;</span>元</label></td>
                                 </tr>
                                 <tr style="display:block;height:80px;">
                                     <td>还&nbsp;&nbsp;款&nbsp;&nbsp;日:</td>
@@ -169,7 +169,7 @@
     $(function () {
         var time1 = $("#loanDate").val().toString().split('/');
         $("#incontent>div").eq(0).show().siblings().hide();
-        var liQian = parseInt(@Model.MB_AllMoney);
+        var liQian = parseInt(@Model.Ud_Money);
         var liXi = (liQian * parseInt(@Model.Ud_Time) / 12 * @Model.LT_GoalID * 0.01);
 
         var year = parseInt(time1[0]);

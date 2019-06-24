@@ -8,6 +8,7 @@
 <head>
     <title>Calculator</title>
     <!-- custom-theme -->
+    <script src="~/Scripts/jquery-3.3.1.js"></script>
     <link href="~/Content/bootstrap.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -171,7 +172,6 @@
                             <td></td>
                             <td></td>
                             <td></td>
-
                         </tr>
 
                         <tr>
@@ -365,7 +365,7 @@
         var sex = $("input[name='sex']:checked").val();
         var list = $("#SelList").val();
         var type = $("input[name='type']:checked").val();
-        var mon = $("#txtMon").val();
+        var mon = $("#txtMon").val()+0+0+0+0;
         var date = $("#txtDate").val();
         var list1 = $("#SelList1").val();
         var tel = $("#txtTel").val();
@@ -388,33 +388,33 @@
         }     
 
 
-        $.ajax({
-                url: '/LoanItem/Detaila',
-                type: 'post',
-                contentType: 'application/json',
-                // Not to set any content header
-                processData: false,
-                dataType:'json',
-                 // Not to process data
-                data:fileData, //{ YCUser:obj},
-                success: function (result, status, xhr) {
-                    alert(result);
-                    $("#fileInput").val("");
-                },
-                error: function (xhr, status, error) {
-                    alert(status);
-                }
-            });
-
         //$.ajax({
-        //    url: '/LoanItem/Detaila',
-        //    type: 'post',
-        //    data: { YCUser: obj },
-        //    success: function (data) {
-        //        console.log(data);
-        //        return;
-        //    }
-        //})
+        //        url: '/LoanItem/Detaila',
+        //        type: 'post',
+        //        contentType: false /*'application/json'*/,
+        //        // Not to set any content header
+        //        processData: false,
+        //        dataType:'json',
+        //         // Not to process data
+        //        data:fileData, //{ YCUser:obj},
+        //        success: function (result, status, xhr) {
+        //            alert(result);
+        //            $("#fileInput").val("");
+        //        },
+        //        error: function (xhr, status, error) {
+        //            alert(status);
+        //        }
+        //    });
+
+        $.ajax({
+            url: '/LoanItem/Detaila',
+            type: 'post',
+            data: { YCUser: obj },
+            success: function (data) {
+                alert('提交成功，等待审核');
+                location.href = '/LoanItem/Index'
+            }
+        })
     }
 </script>
 
