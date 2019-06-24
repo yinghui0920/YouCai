@@ -53,7 +53,7 @@
   <xs:complexType name="UserDetailAndMyBill">
     <xs:sequence>
       <xs:element minOccurs="0" name="LT_GoalID" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="MB_AllMoney" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ud_Money" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Ud_Name" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Ud_NowDate" type="xs:dateTime" />
       <xs:element minOccurs="0" name="Ud_Phone" nillable="true" type="xs:string" />

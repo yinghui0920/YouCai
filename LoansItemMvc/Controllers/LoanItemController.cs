@@ -192,7 +192,7 @@ namespace LoansItemMvc.Controllers
         //个人中心
         public ActionResult MyPersonCenter(UserDetailAndMyBill u)
         {
-            u.Ud_Name = "自行车";
+            u.Ud_Name = "梁旭";
             ServiceReference2.UserDetailAndMyBill userAndBill = new UserDetailAndMyBill();
             ServiceReference2.GetClient client = new GetClient();
             UserDetailAndMyBill s = JsonConvert.DeserializeObject<UserDetailAndMyBill>(client.GetUserInfoAndMyBill(u));
