@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="5b381bea-54ff-4405-af1d-a2b058416b5f" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address=" http://10.1.152.16:8080/GetLogin.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="GetLogin.xsd" MetadataType="Schema" ID="730fb4c7-7399-48d6-b07c-a743ecab1966" SourceId="1" SourceUrl="http://10.1.152.16:8080/GetLogin.svc?xsd=xsd2" />
+    <MetadataFile FileName="GetLogin.wsdl" MetadataType="Wsdl" ID="6364a817-d6e4-458a-9fca-1d7bf6ba2704" SourceId="1" SourceUrl="http://10.1.152.16:8080/GetLogin.svc?wsdl" />
+    <MetadataFile FileName="GetLogin1.xsd" MetadataType="Schema" ID="24af6d3e-a858-483a-9e6f-5ce993d6f826" SourceId="1" SourceUrl="http://10.1.152.16:8080/GetLogin.svc?xsd=xsd1" />
+    <MetadataFile FileName="GetLogin.disco" MetadataType="Disco" ID="399480fa-6ea4-4a43-ba2c-6b42ead3ecaa" SourceId="1" SourceUrl="http://10.1.152.16:8080/GetLogin.svc?disco" />
+    <MetadataFile FileName="GetLogin2.xsd" MetadataType="Schema" ID="fff77317-5874-4e73-af22-389828049643" SourceId="1" SourceUrl="http://10.1.152.16:8080/GetLogin.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

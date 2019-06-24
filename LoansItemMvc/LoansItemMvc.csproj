@@ -149,12 +149,22 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Connected Services\ServiceClient\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\ServiceReference1\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="Connected Services\ServiceReference2\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\ServiceReference4\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -175,6 +185,16 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Connected Services\ServiceClient\AddOne.wsdl" />
+    <None Include="Connected Services\ServiceClient\AddOne.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceClient\AddOne1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceClient\AddOne2.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\ServiceReference1\Add.disco" />
     <None Include="Connected Services\ServiceReference1\configuration91.svcinfo" />
     <None Include="Connected Services\ServiceReference1\configuration.svcinfo" />
@@ -185,6 +205,13 @@
     <None Include="Connected Services\ServiceReference2\Get.disco" />
     <None Include="Connected Services\ServiceReference2\configuration91.svcinfo" />
     <None Include="Connected Services\ServiceReference2\configuration.svcinfo" />
+    <None Include="Connected Services\ServiceClient\AddOne.disco" />
+    <None Include="Connected Services\ServiceClient\configuration91.svcinfo" />
+    <None Include="Connected Services\ServiceClient\configuration.svcinfo" />
+    <None Include="Connected Services\ServiceClient\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Connected Services\ServiceReference2\LoansItemMvc.ServiceReference2.YCIdentityTableData.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -198,6 +225,13 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <None Include="Connected Services\ServiceReference2\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\ServiceReference4\GetLogin.disco" />
+    <None Include="Connected Services\ServiceReference4\configuration91.svcinfo" />
+    <None Include="Connected Services\ServiceReference4\configuration.svcinfo" />
+    <None Include="Connected Services\ServiceReference4\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -323,6 +357,16 @@
     <None Include="Connected Services\ServiceReference2\Get2.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\ServiceReference4\GetLogin.wsdl" />
+    <None Include="Connected Services\ServiceReference4\GetLogin.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceReference4\GetLogin1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceReference4\GetLogin2.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -352,10 +396,10 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\LoanItem\Home.cshtml" />
     <Content Include="Views\LoanItem\Index.cshtml" />
-    <Content Include="Views\LoanItem\Login.cshtml" />
     <Content Include="Views\LoanItem\Calculator.cshtml" />
     <Content Include="Views\LoanItem\Detail.cshtml" />
     <Content Include="Views\Test\Index.cshtml" />
+    <Content Include="Views\LoanItem\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -377,8 +421,10 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\ServiceClient\" />
     <WCFMetadataStorage Include="Connected Services\ServiceReference1\" />
     <WCFMetadataStorage Include="Connected Services\ServiceReference2\" />
+    <WCFMetadataStorage Include="Connected Services\ServiceReference4\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

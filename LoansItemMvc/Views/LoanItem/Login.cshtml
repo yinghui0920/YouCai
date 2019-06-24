@@ -99,13 +99,13 @@
                                                 <div class="row form-group">
                                                     <div class="col-md-12">
                                                         <label for="username">用户名</label>
-                                                        <input type="text" class="form-control" id="username">
+                                                        <input type="text" class="form-control" id="username1">
                                                     </div>
                                                 </div>
                                                 <div class="row form-group">
                                                     <div class="col-md-12">
                                                         <label for="password">密码</label>
-                                                        <input type="password" class="form-control" id="password">
+                                                        <input type="password" class="form-control" id="password1">
                                                     </div>
                                                 </div>
                                                 <div class="row form-group">
@@ -122,7 +122,7 @@
                                                 </div>
                                                 <div class="row form-group">
                                                     <div class="col-md-12" style="height:100px;">
-                                                        <input id="mar" type="hidden" value= "@Session["code"]"  >
+                                                        <input id="mar" type="hidden"   >
                                                         <label for="tel" >验证码</label>
                                                         <input type="text" class="form-control" id="code" style="width:210px;">
                                                     </div>
@@ -154,7 +154,7 @@
 
 												<div class="row form-group">
                                                     <div class="col-md-12">
-                                                        <input type="button" class="btn btn-primary" value="登录">
+                                                        <input type="button" class="btn btn-primary" value="登录" onclick="DengLu()">
                                                     </div>
 												</div>
 											</form>	
@@ -228,7 +228,7 @@
         $.ajax({
             url: "/LoanItem/MessageType?tel=" + phone,
             success: function (data) {
-                console.log(data);
+                $("#mar").val(data);
                 return;  
             }
         })
@@ -238,11 +238,61 @@
         var value = $("#mar").val();
         if (code == "") {
             alert("验证码不能为空！");
+            return;
         }
         if (code != value) {
             alert("验证码不正确！");
+            return;
         }
+        
+        var dt = {
+            U_Name: $("#username1").val(),
+            U_Password: $("#password1").val(),
+            U_Phone:$("#PhoneNum").val(),
         }
+       
+        $.ajax({
+            url: "/LoanItem/Add",
+            type: "post",
+            data: { data: dt },
+            success: function (data) {
+                alert("注册成功");
+                location.href = "/LoanItem/Login";
+
+                return;
+            }
+        })
+ 
+    }
+    function DengLu() {
+        var U_Name = $("#username").val();
+        var U_Password = $("#password").val();
+        if (U_Name=="") {
+            alert("账号不能为空");
+            return;
+        }
+        if (U_Password=="") {
+            alert("密码不能为空");
+            return;
+        }
+        var dt = {
+            U_Name: $("#username").val(),
+            U_Password: $("#password").val(),
+           
+        }
+        $.ajax({
+            url: "/LoanItem/DengLu",
+            type: "get",
+            data:dt,
+            success: function (data) {
+               
+                location.href = "/LoanItem/Home";
+            }
+        })
+    }
+
+    
+
     
 </script>
 
