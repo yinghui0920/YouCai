@@ -171,7 +171,6 @@
         $("#incontent>div").eq(0).show().siblings().hide();
         var liQian = parseInt(@Model.Ud_Money);
         var liXi = (liQian * parseInt(@Model.Ud_Time) / 12 * @Model.LT_GoalID * 0.01);
-
         var year = parseInt(time1[0]);
         var month = parseInt(time1[1]);
         for (var i = 1; i <= @Model.Ud_Time; i++) {
@@ -188,7 +187,6 @@
                 + '  </tr>';
             $("#tb").append(s);
         }
-
     })
     function clickYetM() {
         alert("请绑定银行卡");
