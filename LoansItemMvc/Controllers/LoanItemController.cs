@@ -189,6 +189,20 @@ namespace LoansItemMvc.Controllers
         {
             return true;
         }
+        //个人中心
+        public ActionResult MyPersonCenter(UserDetailAndMyBill u)
+        {
+            u.Ud_Name = "自行车";
+            ServiceReference2.UserDetailAndMyBill userAndBill = new UserDetailAndMyBill();
+            ServiceReference2.GetClient client = new GetClient();
+            UserDetailAndMyBill s = JsonConvert.DeserializeObject<UserDetailAndMyBill>(client.GetUserInfoAndMyBill(u));
+            return View(s);
+        }
+        //帮助
+        public ActionResult Helphelp()
+        {
+            return View();
+        }
     }
 
 }

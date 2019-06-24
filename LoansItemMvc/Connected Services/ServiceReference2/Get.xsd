@@ -60,14 +60,14 @@
   <xs:element name="GetUserInfoAndMyBill">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="Ud_Name" nillable="true" type="xs:string" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/MyDome.Model" minOccurs="0" name="us" nillable="true" type="q8:UserDetailAndMyBill" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="GetUserInfoAndMyBillResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/MyDome.Model" minOccurs="0" name="GetUserInfoAndMyBillResult" nillable="true" type="q8:UserDetailAndMyBill" />
+        <xs:element minOccurs="0" name="GetUserInfoAndMyBillResult" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -82,6 +82,116 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="MoeneyResult" type="xs:double" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NO_Moeney">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/MyDome.Model" minOccurs="0" name="data" nillable="true" type="q10:YCMyBillData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NO_MoeneyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="NO_MoeneyResult" type="xs:double" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NO_Number">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NO_NumberResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="NO_NumberResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NO_Audit1">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/MyDome.Model" minOccurs="0" name="data" nillable="true" type="q11:NO_Audit" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NO_Audit1Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/MyDome.Model" minOccurs="0" name="NO_Audit1Result" nillable="true" type="q12:ArrayOfNO_Audit" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LGZ_Detail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Ud_Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LGZ_DetailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/MyDome.Model" minOccurs="0" name="LGZ_DetailResult" nillable="true" type="q13:ArrayOfDeteail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LGZ_Updte">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="U_Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LGZ_UpdteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LGZ_UpdteResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="XSF_UserInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/MyDome.Model" minOccurs="0" name="data" nillable="true" type="q14:YCUserInfoData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="XSF_UserInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/MyDome.Model" minOccurs="0" name="XSF_UserInfoResult" nillable="true" type="q15:ArrayOfYCUserInfoData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="XSF_Moneney">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/MyDome.Model" minOccurs="0" name="data" nillable="true" type="q16:NO_Audit" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="XSF_MoneneyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/MyDome.Model" minOccurs="0" name="XSF_MoneneyResult" nillable="true" type="q17:ArrayOfNO_Audit" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="XSF_ShenHe">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="U_Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="XSF_ShenHeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/MyDome.Model" minOccurs="0" name="XSF_ShenHeResult" nillable="true" type="q18:ArrayOfDeteail" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

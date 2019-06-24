@@ -43,6 +43,54 @@
   <wsdl:message name="IGet_Moeney_OutputMessage">
     <wsdl:part name="parameters" element="tns:MoeneyResponse" />
   </wsdl:message>
+  <wsdl:message name="IGet_NO_Moeney_InputMessage">
+    <wsdl:part name="parameters" element="tns:NO_Moeney" />
+  </wsdl:message>
+  <wsdl:message name="IGet_NO_Moeney_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NO_MoeneyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_NO_Number_InputMessage">
+    <wsdl:part name="parameters" element="tns:NO_Number" />
+  </wsdl:message>
+  <wsdl:message name="IGet_NO_Number_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NO_NumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_NO_Audit1_InputMessage">
+    <wsdl:part name="parameters" element="tns:NO_Audit1" />
+  </wsdl:message>
+  <wsdl:message name="IGet_NO_Audit1_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NO_Audit1Response" />
+  </wsdl:message>
+  <wsdl:message name="IGet_LGZ_Detail_InputMessage">
+    <wsdl:part name="parameters" element="tns:LGZ_Detail" />
+  </wsdl:message>
+  <wsdl:message name="IGet_LGZ_Detail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LGZ_DetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_LGZ_Updte_InputMessage">
+    <wsdl:part name="parameters" element="tns:LGZ_Updte" />
+  </wsdl:message>
+  <wsdl:message name="IGet_LGZ_Updte_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LGZ_UpdteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_XSF_UserInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:XSF_UserInfo" />
+  </wsdl:message>
+  <wsdl:message name="IGet_XSF_UserInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:XSF_UserInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_XSF_Moneney_InputMessage">
+    <wsdl:part name="parameters" element="tns:XSF_Moneney" />
+  </wsdl:message>
+  <wsdl:message name="IGet_XSF_Moneney_OutputMessage">
+    <wsdl:part name="parameters" element="tns:XSF_MoneneyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_XSF_ShenHe_InputMessage">
+    <wsdl:part name="parameters" element="tns:XSF_ShenHe" />
+  </wsdl:message>
+  <wsdl:message name="IGet_XSF_ShenHe_OutputMessage">
+    <wsdl:part name="parameters" element="tns:XSF_ShenHeResponse" />
+  </wsdl:message>
   <wsdl:portType name="IGet">
     <wsdl:operation name="DoWorkTable">
       <wsdl:input wsaw:Action="http://tempuri.org/IGet/DoWorkTable" message="tns:IGet_DoWorkTable_InputMessage" />
@@ -67,6 +115,38 @@
     <wsdl:operation name="Moeney">
       <wsdl:input wsaw:Action="http://tempuri.org/IGet/Moeney" message="tns:IGet_Moeney_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IGet/MoeneyResponse" message="tns:IGet_Moeney_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NO_Moeney">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/NO_Moeney" message="tns:IGet_NO_Moeney_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/NO_MoeneyResponse" message="tns:IGet_NO_Moeney_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NO_Number">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/NO_Number" message="tns:IGet_NO_Number_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/NO_NumberResponse" message="tns:IGet_NO_Number_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NO_Audit1">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/NO_Audit1" message="tns:IGet_NO_Audit1_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/NO_Audit1Response" message="tns:IGet_NO_Audit1_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LGZ_Detail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/LGZ_Detail" message="tns:IGet_LGZ_Detail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/LGZ_DetailResponse" message="tns:IGet_LGZ_Detail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LGZ_Updte">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/LGZ_Updte" message="tns:IGet_LGZ_Updte_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/LGZ_UpdteResponse" message="tns:IGet_LGZ_Updte_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="XSF_UserInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/XSF_UserInfo" message="tns:IGet_XSF_UserInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/XSF_UserInfoResponse" message="tns:IGet_XSF_UserInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="XSF_Moneney">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/XSF_Moneney" message="tns:IGet_XSF_Moneney_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/XSF_MoneneyResponse" message="tns:IGet_XSF_Moneney_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="XSF_ShenHe">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/XSF_ShenHe" message="tns:IGet_XSF_ShenHe_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/XSF_ShenHeResponse" message="tns:IGet_XSF_ShenHe_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IGet" type="tns:IGet">
@@ -118,6 +198,78 @@
     </wsdl:operation>
     <wsdl:operation name="Moeney">
       <soap:operation soapAction="http://tempuri.org/IGet/Moeney" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NO_Moeney">
+      <soap:operation soapAction="http://tempuri.org/IGet/NO_Moeney" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NO_Number">
+      <soap:operation soapAction="http://tempuri.org/IGet/NO_Number" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NO_Audit1">
+      <soap:operation soapAction="http://tempuri.org/IGet/NO_Audit1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LGZ_Detail">
+      <soap:operation soapAction="http://tempuri.org/IGet/LGZ_Detail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LGZ_Updte">
+      <soap:operation soapAction="http://tempuri.org/IGet/LGZ_Updte" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="XSF_UserInfo">
+      <soap:operation soapAction="http://tempuri.org/IGet/XSF_UserInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="XSF_Moneney">
+      <soap:operation soapAction="http://tempuri.org/IGet/XSF_Moneney" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="XSF_ShenHe">
+      <soap:operation soapAction="http://tempuri.org/IGet/XSF_ShenHe" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

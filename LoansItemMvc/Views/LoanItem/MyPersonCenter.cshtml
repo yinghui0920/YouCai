@@ -1,0 +1,203 @@
+﻿@model LoansItemMvc.ServiceReference2.UserDetailAndMyBill
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>MyPersonCenter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="" />
+    <link href="~/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="~/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="~/Scripts/jquery-3.3.1.js"></script>
+    <link href="~/css/font-awesome.css" rel="stylesheet">
+    <link href="~/css/StyleSheet1.css" rel="stylesheet" />
+
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <!-- banner -->
+    <div class="banner1">
+        <div class="container">
+            <nav class="navbar navbar-default">
+                <div class="navbar-header navbar-left">
+
+                    <h1><a class="navbar-brand" href="index.html"><span>L</span><i>有财贷款</i></a></h1>
+                </div>
+                <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+                    <nav class="link-effect-2" id="link-effect-2">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="/LoanItem/Home" class="effect-3">首页</a></li>
+                            <li><a href="/LoanItem/Index" class="effect-3">找贷款</a></li>
+                            <li><a href="portfolio.html" class="effect-3">利率计算器</a></li>
+                            <li><a href="/LoanItem/Helphelp" class="effect-3">帮助</a></li>
+                            <li><a href="/LoanItem/MyPersonCenter" class="effect-3">个人中心</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="breadcrumbs">
+        <div class="container">
+            <div class="w3layouts_breadcrumbs_left">
+                <ul>
+                    <li><a href="Home.cshtml">首页</a><span>/</span></li>
+                    <li>个人中心</li>
+                </ul>
+            </div>
+            <div class="w3layouts_breadcrumbs_right">
+                <h2>个人中心</h2>
+            </div>
+
+        </div>
+    </div>
+    <div class="banner-bottom">
+        <div class="container">
+            <div id="aInfo">
+                <div id="aaa1">
+                    <ul id="infoall">
+                        <li>我的信息</li>
+                        <li>我的银行卡</li>
+                        <li>我的账单</li>
+                        <li>还款</li>
+                    </ul>
+                </div>
+                <div id="incontent">
+                    <div class="myinfo" style="border:2px #c2a1a1">
+                        <table style="text-align:center;color:#b6b1b1">
+                            <tr style="display:block;height:80px;">
+                                <td>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：</td>
+                                <td><label id="myName">@Model.Ud_Name</label></td>
+                            </tr>
+                            <tr style="display:block;height:80px;">
+                                <td>贷款时间：</td>
+                                <td><label id="myLoanTime">@Model.Ud_NowDate.ToString().Substring(0, 10)</label></td>
+                            </tr>
+                            <tr style="display:block;height:80px;">
+                                <td>手&nbsp;&nbsp;机&nbsp;&nbsp;号：</td>
+                                <td><label id="myPhone">@Model.Ud_Phone</label></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div>
+                        <div class="myinfo" id="cardInfo">
+                            <div>
+                                <a href="">
+                                    <img src="~/images/card1.png" style="margin:auto auto;display:block;padding-top:30px;" />
+                                </a>
+                            </div>
+                           
+                        </div>
+                    </div>
+                    <div>
+                        <div class="myinfo" style="border:2px #c2a1a1">
+                            <table style="text-align:center;color:#b6b1b1">
+                                <tr style="display:block;height:80px;">
+                                    <td>期&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;数:</td>
+                                    <td><label id="myName">@Model.Ud_Time 期</label></td>
+                                </tr>
+                                <tr style="display:block;height:80px;">
+                                    <td>借款金额:</td>
+                                    <td><label id="myLoanTime"><span style="color:red;">&nbsp;@Model.MB_AllMoney&nbsp;</span>元</label></td>
+                                </tr>
+                                <tr style="display:block;height:80px;">
+                                    <td>还&nbsp;&nbsp;款&nbsp;&nbsp;日:</td>
+                                    <td><label id="myPhone"><b>每月的 <span style="color:red;">&nbsp;@Model.YetTime&nbsp;&nbsp;</span>日</b></label></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="myinfo" style="height:100%;overflow-y:auto">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th style="text-align:center;">期数</th>
+                                    <th style="text-align:center;">还款期</th>
+                                    <th style="text-align:center;">利息</th>
+                                    <th style="text-align:center;">应还</th>
+                                    <th style="text-align:center;">操作</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tb" style="text-align:center"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <div class="w3ls_address_mail_footer_grids">
+                <div class="col-md-4 w3ls_footer_grid_left">
+                    <div class="wthree_footer_grid_left">
+                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                    </div>
+                    <p>中国<span>上海市</span></p>
+                </div>
+                <div class="col-md-4 w3ls_footer_grid_left">
+                    <div class="wthree_footer_grid_left">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                    </div>
+                    <p>客服电话+(0318) 123 456777  <span>举报电话+(0318) 123 456999 </span></p>
+                </div>
+                <div class="col-md-4 w3ls_footer_grid_left">
+                    <div class="wthree_footer_grid_left">
+                        <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                    </div>
+                    <p>
+                        <span>1501059650@qq.com</span>
+                        <span><a href="mailto:info@example.com">邮箱登录</a></span>
+                    </p>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+            <div class="agileinfo_copyright">
+                <p>温馨提示 : 市场有风险 , 贷款需谨慎</p>
+            </div>
+        </div>
+    </div>
+    <input id="loanDate" type="hidden" value="@Model.Ud_NowDate" />
+</body>
+</html>
+<script>
+
+    $(function () {
+        var time1 = $("#loanDate").val().toString().split('/');
+        $("#incontent>div").eq(0).show().siblings().hide();
+        var liQian = parseInt(@Model.MB_AllMoney);
+        var liXi = (liQian * parseInt(@Model.Ud_Time) / 12 * @Model.LT_GoalID * 0.01);
+
+        var year = parseInt(time1[0]);
+        var month = parseInt(time1[1]);
+        for (var i = 1; i <= @Model.Ud_Time; i++) {
+             month= month+1;
+            if (month==13) {
+              year= year+ 1;
+            }
+            var s = '<tr>'
+                + '<td>' + i + '</td>'
+                + '<td>' +year+"/"+month+"/"+time1[2].toString().substring(0,3)+ '</td>'
+                + '<td>' +liXi +'</td>'
+                + '<td>' + ((liQian / @Model.Ud_Time) + liXi).toFixed(2)  + '</td>      '
+                + '<td>' + ' <input id="Button1" type="button" value="还款" onclick="clickYetM()"/>' + '</td>      '
+                + '  </tr>';
+            $("#tb").append(s);
+        }
+
+    })
+    function clickYetM() {
+        alert("请绑定银行卡");
+    }
+    $("#infoall>li").click(function () {
+        $("#infoall>li").attr("style","");
+        var index = $(this).index();
+        $(this).css("font-weight",'bold');
+        $("#incontent>div").eq(index).show().siblings().hide();
+    })
+
+</script>

@@ -52,17 +52,20 @@
   <xs:element name="YCAdminInfoData" nillable="true" type="tns:YCAdminInfoData" />
   <xs:complexType name="UserDetailAndMyBill">
     <xs:sequence>
+      <xs:element minOccurs="0" name="LT_GoalID" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="MB_AllMoney" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Ud_Name" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Ud_NowDate" type="xs:dateTime" />
       <xs:element minOccurs="0" name="Ud_Phone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ud_Time" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="YetTime" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="UserDetailAndMyBill" nillable="true" type="tns:UserDetailAndMyBill" />
   <xs:complexType name="YCUserDetailsData">
     <xs:sequence>
-      <xs:element minOccurs="0" name="MyBillId" nillable="true" type="tns:YCMyBillData" />
+      <xs:element minOccurs="0" name="TempNum" type="xs:double" />
+      <xs:element minOccurs="0" name="TempNum1" type="xs:int" />
       <xs:element minOccurs="0" name="Ud_AuditId" type="xs:boolean" />
       <xs:element minOccurs="0" name="Ud_BillId" type="xs:int" />
       <xs:element minOccurs="0" name="Ud_Goal" type="xs:int" />
@@ -77,6 +80,7 @@
       <xs:element minOccurs="0" name="Ud_Sex" type="xs:boolean" />
       <xs:element minOccurs="0" name="Ud_Time" type="xs:int" />
       <xs:element minOccurs="0" name="Ud_Type" type="xs:int" />
+      <xs:element minOccurs="0" name="Ud_TypeId" type="xs:int" />
       <xs:element minOccurs="0" name="Ud_UserId" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
@@ -90,7 +94,70 @@
       <xs:element minOccurs="0" name="MB_Money" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="MB_Month" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="MB_NowDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="tempNum" type="xs:double" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="YCMyBillData" nillable="true" type="tns:YCMyBillData" />
+  <xs:complexType name="NO_Audit">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="I_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ud_Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Ud_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ud_NowDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Ud_Sex" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="NO_Audit" nillable="true" type="tns:NO_Audit" />
+  <xs:complexType name="ArrayOfNO_Audit">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="NO_Audit" nillable="true" type="tns:NO_Audit" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfNO_Audit" nillable="true" type="tns:ArrayOfNO_Audit" />
+  <xs:complexType name="ArrayOfDeteail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Deteail" nillable="true" type="tns:Deteail" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDeteail" nillable="true" type="tns:ArrayOfDeteail" />
+  <xs:complexType name="Deteail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="I_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LT_GoalID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LT_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LT_Picture" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LT_Trait" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MB_AllMoney" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MB_Interest" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MB_LastDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MB_Money" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MB_NowDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ud_IDCardPic" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ud_Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Ud_Money" type="xs:double" />
+      <xs:element minOccurs="0" name="Ud_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ud_NowDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Ud_Phone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ud_Remark" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ud_Sex" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Ud_Time" type="xs:int" />
+      <xs:element minOccurs="0" name="Ud_Type" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Deteail" nillable="true" type="tns:Deteail" />
+  <xs:complexType name="YCUserInfoData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="U_Id" type="xs:int" />
+      <xs:element minOccurs="0" name="U_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="U_Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="U_Phone" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="YCUserInfoData" nillable="true" type="tns:YCUserInfoData" />
+  <xs:complexType name="ArrayOfYCUserInfoData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="YCUserInfoData" nillable="true" type="tns:YCUserInfoData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfYCUserInfoData" nillable="true" type="tns:ArrayOfYCUserInfoData" />
 </xs:schema>

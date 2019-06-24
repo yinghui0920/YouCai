@@ -331,6 +331,9 @@ namespace LoansItemMvc.ServiceReference2 {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string LT_GoalIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string MB_AllMoneyField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -343,6 +346,9 @@ namespace LoansItemMvc.ServiceReference2 {
         private string Ud_PhoneField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Ud_TimeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string YetTimeField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
@@ -352,6 +358,19 @@ namespace LoansItemMvc.ServiceReference2 {
             }
             set {
                 this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string LT_GoalID {
+            get {
+                return this.LT_GoalIDField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LT_GoalIDField, value) != true)) {
+                    this.LT_GoalIDField = value;
+                    this.RaisePropertyChanged("LT_GoalID");
+                }
             }
         }
         
@@ -408,6 +427,19 @@ namespace LoansItemMvc.ServiceReference2 {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Ud_Time {
+            get {
+                return this.Ud_TimeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Ud_TimeField, value) != true)) {
+                    this.Ud_TimeField = value;
+                    this.RaisePropertyChanged("Ud_Time");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public string YetTime {
             get {
                 return this.YetTimeField;
@@ -440,7 +472,10 @@ namespace LoansItemMvc.ServiceReference2 {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private LoansItemMvc.ServiceReference2.YCMyBillData MyBillIdField;
+        private double TempNumField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int TempNum1Field;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private bool Ud_AuditIdField;
@@ -485,6 +520,9 @@ namespace LoansItemMvc.ServiceReference2 {
         private int Ud_TypeField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int Ud_TypeIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int Ud_UserIdField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
@@ -498,14 +536,27 @@ namespace LoansItemMvc.ServiceReference2 {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public LoansItemMvc.ServiceReference2.YCMyBillData MyBillId {
+        public double TempNum {
             get {
-                return this.MyBillIdField;
+                return this.TempNumField;
             }
             set {
-                if ((object.ReferenceEquals(this.MyBillIdField, value) != true)) {
-                    this.MyBillIdField = value;
-                    this.RaisePropertyChanged("MyBillId");
+                if ((this.TempNumField.Equals(value) != true)) {
+                    this.TempNumField = value;
+                    this.RaisePropertyChanged("TempNum");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int TempNum1 {
+            get {
+                return this.TempNum1Field;
+            }
+            set {
+                if ((this.TempNum1Field.Equals(value) != true)) {
+                    this.TempNum1Field = value;
+                    this.RaisePropertyChanged("TempNum1");
                 }
             }
         }
@@ -693,6 +744,19 @@ namespace LoansItemMvc.ServiceReference2 {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Ud_TypeId {
+            get {
+                return this.Ud_TypeIdField;
+            }
+            set {
+                if ((this.Ud_TypeIdField.Equals(value) != true)) {
+                    this.Ud_TypeIdField = value;
+                    this.RaisePropertyChanged("Ud_TypeId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public int Ud_UserId {
             get {
                 return this.Ud_UserIdField;
@@ -744,6 +808,9 @@ namespace LoansItemMvc.ServiceReference2 {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.DateTime MB_NowDateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double tempNumField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -846,6 +913,570 @@ namespace LoansItemMvc.ServiceReference2 {
             }
         }
         
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double tempNum {
+            get {
+                return this.tempNumField;
+            }
+            set {
+                if ((this.tempNumField.Equals(value) != true)) {
+                    this.tempNumField = value;
+                    this.RaisePropertyChanged("tempNum");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="NO_Audit", Namespace="http://schemas.datacontract.org/2004/07/MyDome.Model")]
+    [System.SerializableAttribute()]
+    public partial class NO_Audit : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string I_NameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int Ud_IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Ud_NameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime Ud_NowDateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool Ud_SexField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string I_Name {
+            get {
+                return this.I_NameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.I_NameField, value) != true)) {
+                    this.I_NameField = value;
+                    this.RaisePropertyChanged("I_Name");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Ud_Id {
+            get {
+                return this.Ud_IdField;
+            }
+            set {
+                if ((this.Ud_IdField.Equals(value) != true)) {
+                    this.Ud_IdField = value;
+                    this.RaisePropertyChanged("Ud_Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Ud_Name {
+            get {
+                return this.Ud_NameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Ud_NameField, value) != true)) {
+                    this.Ud_NameField = value;
+                    this.RaisePropertyChanged("Ud_Name");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime Ud_NowDate {
+            get {
+                return this.Ud_NowDateField;
+            }
+            set {
+                if ((this.Ud_NowDateField.Equals(value) != true)) {
+                    this.Ud_NowDateField = value;
+                    this.RaisePropertyChanged("Ud_NowDate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool Ud_Sex {
+            get {
+                return this.Ud_SexField;
+            }
+            set {
+                if ((this.Ud_SexField.Equals(value) != true)) {
+                    this.Ud_SexField = value;
+                    this.RaisePropertyChanged("Ud_Sex");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Deteail", Namespace="http://schemas.datacontract.org/2004/07/MyDome.Model")]
+    [System.SerializableAttribute()]
+    public partial class Deteail : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string I_NameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string LT_GoalIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string LT_NameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string LT_PictureField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string LT_TraitField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MB_AllMoneyField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MB_InterestField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MB_LastDateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MB_MoneyField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MB_NowDateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Ud_IDCardPicField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int Ud_IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double Ud_MoneyField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Ud_NameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime Ud_NowDateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Ud_PhoneField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Ud_RemarkField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool Ud_SexField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int Ud_TimeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool Ud_TypeField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string I_Name {
+            get {
+                return this.I_NameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.I_NameField, value) != true)) {
+                    this.I_NameField = value;
+                    this.RaisePropertyChanged("I_Name");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string LT_GoalID {
+            get {
+                return this.LT_GoalIDField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LT_GoalIDField, value) != true)) {
+                    this.LT_GoalIDField = value;
+                    this.RaisePropertyChanged("LT_GoalID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string LT_Name {
+            get {
+                return this.LT_NameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LT_NameField, value) != true)) {
+                    this.LT_NameField = value;
+                    this.RaisePropertyChanged("LT_Name");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string LT_Picture {
+            get {
+                return this.LT_PictureField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LT_PictureField, value) != true)) {
+                    this.LT_PictureField = value;
+                    this.RaisePropertyChanged("LT_Picture");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string LT_Trait {
+            get {
+                return this.LT_TraitField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LT_TraitField, value) != true)) {
+                    this.LT_TraitField = value;
+                    this.RaisePropertyChanged("LT_Trait");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string MB_AllMoney {
+            get {
+                return this.MB_AllMoneyField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MB_AllMoneyField, value) != true)) {
+                    this.MB_AllMoneyField = value;
+                    this.RaisePropertyChanged("MB_AllMoney");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string MB_Interest {
+            get {
+                return this.MB_InterestField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MB_InterestField, value) != true)) {
+                    this.MB_InterestField = value;
+                    this.RaisePropertyChanged("MB_Interest");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string MB_LastDate {
+            get {
+                return this.MB_LastDateField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MB_LastDateField, value) != true)) {
+                    this.MB_LastDateField = value;
+                    this.RaisePropertyChanged("MB_LastDate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string MB_Money {
+            get {
+                return this.MB_MoneyField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MB_MoneyField, value) != true)) {
+                    this.MB_MoneyField = value;
+                    this.RaisePropertyChanged("MB_Money");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string MB_NowDate {
+            get {
+                return this.MB_NowDateField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MB_NowDateField, value) != true)) {
+                    this.MB_NowDateField = value;
+                    this.RaisePropertyChanged("MB_NowDate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Ud_IDCardPic {
+            get {
+                return this.Ud_IDCardPicField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Ud_IDCardPicField, value) != true)) {
+                    this.Ud_IDCardPicField = value;
+                    this.RaisePropertyChanged("Ud_IDCardPic");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Ud_Id {
+            get {
+                return this.Ud_IdField;
+            }
+            set {
+                if ((this.Ud_IdField.Equals(value) != true)) {
+                    this.Ud_IdField = value;
+                    this.RaisePropertyChanged("Ud_Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double Ud_Money {
+            get {
+                return this.Ud_MoneyField;
+            }
+            set {
+                if ((this.Ud_MoneyField.Equals(value) != true)) {
+                    this.Ud_MoneyField = value;
+                    this.RaisePropertyChanged("Ud_Money");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Ud_Name {
+            get {
+                return this.Ud_NameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Ud_NameField, value) != true)) {
+                    this.Ud_NameField = value;
+                    this.RaisePropertyChanged("Ud_Name");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime Ud_NowDate {
+            get {
+                return this.Ud_NowDateField;
+            }
+            set {
+                if ((this.Ud_NowDateField.Equals(value) != true)) {
+                    this.Ud_NowDateField = value;
+                    this.RaisePropertyChanged("Ud_NowDate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Ud_Phone {
+            get {
+                return this.Ud_PhoneField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Ud_PhoneField, value) != true)) {
+                    this.Ud_PhoneField = value;
+                    this.RaisePropertyChanged("Ud_Phone");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Ud_Remark {
+            get {
+                return this.Ud_RemarkField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Ud_RemarkField, value) != true)) {
+                    this.Ud_RemarkField = value;
+                    this.RaisePropertyChanged("Ud_Remark");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool Ud_Sex {
+            get {
+                return this.Ud_SexField;
+            }
+            set {
+                if ((this.Ud_SexField.Equals(value) != true)) {
+                    this.Ud_SexField = value;
+                    this.RaisePropertyChanged("Ud_Sex");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Ud_Time {
+            get {
+                return this.Ud_TimeField;
+            }
+            set {
+                if ((this.Ud_TimeField.Equals(value) != true)) {
+                    this.Ud_TimeField = value;
+                    this.RaisePropertyChanged("Ud_Time");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool Ud_Type {
+            get {
+                return this.Ud_TypeField;
+            }
+            set {
+                if ((this.Ud_TypeField.Equals(value) != true)) {
+                    this.Ud_TypeField = value;
+                    this.RaisePropertyChanged("Ud_Type");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="YCUserInfoData", Namespace="http://schemas.datacontract.org/2004/07/MyDome.Model")]
+    [System.SerializableAttribute()]
+    public partial class YCUserInfoData : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int U_IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string U_NameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string U_PasswordField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string U_PhoneField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int U_Id {
+            get {
+                return this.U_IdField;
+            }
+            set {
+                if ((this.U_IdField.Equals(value) != true)) {
+                    this.U_IdField = value;
+                    this.RaisePropertyChanged("U_Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string U_Name {
+            get {
+                return this.U_NameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.U_NameField, value) != true)) {
+                    this.U_NameField = value;
+                    this.RaisePropertyChanged("U_Name");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string U_Password {
+            get {
+                return this.U_PasswordField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.U_PasswordField, value) != true)) {
+                    this.U_PasswordField = value;
+                    this.RaisePropertyChanged("U_Password");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string U_Phone {
+            get {
+                return this.U_PhoneField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.U_PhoneField, value) != true)) {
+                    this.U_PhoneField = value;
+                    this.RaisePropertyChanged("U_Phone");
+                }
+            }
+        }
+        
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
         protected void RaisePropertyChanged(string propertyName) {
@@ -885,16 +1516,64 @@ namespace LoansItemMvc.ServiceReference2 {
         System.Threading.Tasks.Task<bool> DoWorkAdminAsync(LoansItemMvc.ServiceReference2.YCAdminInfoData adminInfoData);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGet/GetUserInfoAndMyBill", ReplyAction="http://tempuri.org/IGet/GetUserInfoAndMyBillResponse")]
-        LoansItemMvc.ServiceReference2.UserDetailAndMyBill GetUserInfoAndMyBill(string Ud_Name);
+        string GetUserInfoAndMyBill(LoansItemMvc.ServiceReference2.UserDetailAndMyBill us);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGet/GetUserInfoAndMyBill", ReplyAction="http://tempuri.org/IGet/GetUserInfoAndMyBillResponse")]
-        System.Threading.Tasks.Task<LoansItemMvc.ServiceReference2.UserDetailAndMyBill> GetUserInfoAndMyBillAsync(string Ud_Name);
+        System.Threading.Tasks.Task<string> GetUserInfoAndMyBillAsync(LoansItemMvc.ServiceReference2.UserDetailAndMyBill us);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGet/Moeney", ReplyAction="http://tempuri.org/IGet/MoeneyResponse")]
         double Moeney(LoansItemMvc.ServiceReference2.YCUserDetailsData data);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGet/Moeney", ReplyAction="http://tempuri.org/IGet/MoeneyResponse")]
         System.Threading.Tasks.Task<double> MoeneyAsync(LoansItemMvc.ServiceReference2.YCUserDetailsData data);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGet/NO_Moeney", ReplyAction="http://tempuri.org/IGet/NO_MoeneyResponse")]
+        double NO_Moeney(LoansItemMvc.ServiceReference2.YCMyBillData data);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGet/NO_Moeney", ReplyAction="http://tempuri.org/IGet/NO_MoeneyResponse")]
+        System.Threading.Tasks.Task<double> NO_MoeneyAsync(LoansItemMvc.ServiceReference2.YCMyBillData data);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGet/NO_Number", ReplyAction="http://tempuri.org/IGet/NO_NumberResponse")]
+        int NO_Number();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGet/NO_Number", ReplyAction="http://tempuri.org/IGet/NO_NumberResponse")]
+        System.Threading.Tasks.Task<int> NO_NumberAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGet/NO_Audit1", ReplyAction="http://tempuri.org/IGet/NO_Audit1Response")]
+        LoansItemMvc.ServiceReference2.NO_Audit[] NO_Audit1(LoansItemMvc.ServiceReference2.NO_Audit data);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGet/NO_Audit1", ReplyAction="http://tempuri.org/IGet/NO_Audit1Response")]
+        System.Threading.Tasks.Task<LoansItemMvc.ServiceReference2.NO_Audit[]> NO_Audit1Async(LoansItemMvc.ServiceReference2.NO_Audit data);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGet/LGZ_Detail", ReplyAction="http://tempuri.org/IGet/LGZ_DetailResponse")]
+        LoansItemMvc.ServiceReference2.Deteail[] LGZ_Detail(int Ud_Id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGet/LGZ_Detail", ReplyAction="http://tempuri.org/IGet/LGZ_DetailResponse")]
+        System.Threading.Tasks.Task<LoansItemMvc.ServiceReference2.Deteail[]> LGZ_DetailAsync(int Ud_Id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGet/LGZ_Updte", ReplyAction="http://tempuri.org/IGet/LGZ_UpdteResponse")]
+        int LGZ_Updte(int U_Id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGet/LGZ_Updte", ReplyAction="http://tempuri.org/IGet/LGZ_UpdteResponse")]
+        System.Threading.Tasks.Task<int> LGZ_UpdteAsync(int U_Id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGet/XSF_UserInfo", ReplyAction="http://tempuri.org/IGet/XSF_UserInfoResponse")]
+        LoansItemMvc.ServiceReference2.YCUserInfoData[] XSF_UserInfo(LoansItemMvc.ServiceReference2.YCUserInfoData data);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGet/XSF_UserInfo", ReplyAction="http://tempuri.org/IGet/XSF_UserInfoResponse")]
+        System.Threading.Tasks.Task<LoansItemMvc.ServiceReference2.YCUserInfoData[]> XSF_UserInfoAsync(LoansItemMvc.ServiceReference2.YCUserInfoData data);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGet/XSF_Moneney", ReplyAction="http://tempuri.org/IGet/XSF_MoneneyResponse")]
+        LoansItemMvc.ServiceReference2.NO_Audit[] XSF_Moneney(LoansItemMvc.ServiceReference2.NO_Audit data);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGet/XSF_Moneney", ReplyAction="http://tempuri.org/IGet/XSF_MoneneyResponse")]
+        System.Threading.Tasks.Task<LoansItemMvc.ServiceReference2.NO_Audit[]> XSF_MoneneyAsync(LoansItemMvc.ServiceReference2.NO_Audit data);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGet/XSF_ShenHe", ReplyAction="http://tempuri.org/IGet/XSF_ShenHeResponse")]
+        LoansItemMvc.ServiceReference2.Deteail[] XSF_ShenHe(int U_Id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGet/XSF_ShenHe", ReplyAction="http://tempuri.org/IGet/XSF_ShenHeResponse")]
+        System.Threading.Tasks.Task<LoansItemMvc.ServiceReference2.Deteail[]> XSF_ShenHeAsync(int U_Id);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -956,12 +1635,12 @@ namespace LoansItemMvc.ServiceReference2 {
             return base.Channel.DoWorkAdminAsync(adminInfoData);
         }
         
-        public LoansItemMvc.ServiceReference2.UserDetailAndMyBill GetUserInfoAndMyBill(string Ud_Name) {
-            return base.Channel.GetUserInfoAndMyBill(Ud_Name);
+        public string GetUserInfoAndMyBill(LoansItemMvc.ServiceReference2.UserDetailAndMyBill us) {
+            return base.Channel.GetUserInfoAndMyBill(us);
         }
         
-        public System.Threading.Tasks.Task<LoansItemMvc.ServiceReference2.UserDetailAndMyBill> GetUserInfoAndMyBillAsync(string Ud_Name) {
-            return base.Channel.GetUserInfoAndMyBillAsync(Ud_Name);
+        public System.Threading.Tasks.Task<string> GetUserInfoAndMyBillAsync(LoansItemMvc.ServiceReference2.UserDetailAndMyBill us) {
+            return base.Channel.GetUserInfoAndMyBillAsync(us);
         }
         
         public double Moeney(LoansItemMvc.ServiceReference2.YCUserDetailsData data) {
@@ -970,6 +1649,70 @@ namespace LoansItemMvc.ServiceReference2 {
         
         public System.Threading.Tasks.Task<double> MoeneyAsync(LoansItemMvc.ServiceReference2.YCUserDetailsData data) {
             return base.Channel.MoeneyAsync(data);
+        }
+        
+        public double NO_Moeney(LoansItemMvc.ServiceReference2.YCMyBillData data) {
+            return base.Channel.NO_Moeney(data);
+        }
+        
+        public System.Threading.Tasks.Task<double> NO_MoeneyAsync(LoansItemMvc.ServiceReference2.YCMyBillData data) {
+            return base.Channel.NO_MoeneyAsync(data);
+        }
+        
+        public int NO_Number() {
+            return base.Channel.NO_Number();
+        }
+        
+        public System.Threading.Tasks.Task<int> NO_NumberAsync() {
+            return base.Channel.NO_NumberAsync();
+        }
+        
+        public LoansItemMvc.ServiceReference2.NO_Audit[] NO_Audit1(LoansItemMvc.ServiceReference2.NO_Audit data) {
+            return base.Channel.NO_Audit1(data);
+        }
+        
+        public System.Threading.Tasks.Task<LoansItemMvc.ServiceReference2.NO_Audit[]> NO_Audit1Async(LoansItemMvc.ServiceReference2.NO_Audit data) {
+            return base.Channel.NO_Audit1Async(data);
+        }
+        
+        public LoansItemMvc.ServiceReference2.Deteail[] LGZ_Detail(int Ud_Id) {
+            return base.Channel.LGZ_Detail(Ud_Id);
+        }
+        
+        public System.Threading.Tasks.Task<LoansItemMvc.ServiceReference2.Deteail[]> LGZ_DetailAsync(int Ud_Id) {
+            return base.Channel.LGZ_DetailAsync(Ud_Id);
+        }
+        
+        public int LGZ_Updte(int U_Id) {
+            return base.Channel.LGZ_Updte(U_Id);
+        }
+        
+        public System.Threading.Tasks.Task<int> LGZ_UpdteAsync(int U_Id) {
+            return base.Channel.LGZ_UpdteAsync(U_Id);
+        }
+        
+        public LoansItemMvc.ServiceReference2.YCUserInfoData[] XSF_UserInfo(LoansItemMvc.ServiceReference2.YCUserInfoData data) {
+            return base.Channel.XSF_UserInfo(data);
+        }
+        
+        public System.Threading.Tasks.Task<LoansItemMvc.ServiceReference2.YCUserInfoData[]> XSF_UserInfoAsync(LoansItemMvc.ServiceReference2.YCUserInfoData data) {
+            return base.Channel.XSF_UserInfoAsync(data);
+        }
+        
+        public LoansItemMvc.ServiceReference2.NO_Audit[] XSF_Moneney(LoansItemMvc.ServiceReference2.NO_Audit data) {
+            return base.Channel.XSF_Moneney(data);
+        }
+        
+        public System.Threading.Tasks.Task<LoansItemMvc.ServiceReference2.NO_Audit[]> XSF_MoneneyAsync(LoansItemMvc.ServiceReference2.NO_Audit data) {
+            return base.Channel.XSF_MoneneyAsync(data);
+        }
+        
+        public LoansItemMvc.ServiceReference2.Deteail[] XSF_ShenHe(int U_Id) {
+            return base.Channel.XSF_ShenHe(U_Id);
+        }
+        
+        public System.Threading.Tasks.Task<LoansItemMvc.ServiceReference2.Deteail[]> XSF_ShenHeAsync(int U_Id) {
+            return base.Channel.XSF_ShenHeAsync(U_Id);
         }
     }
 }
